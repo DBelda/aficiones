@@ -11,8 +11,8 @@ public class Aficion {
    private int length;
    
    // Constructor
-   public Aficion(String []aficionesArray){
-       this.Aficiones = aficionesArray;
+   public Aficion(String []Aficiones){
+       this.Aficiones = Aficiones;
        this.length = this.Aficiones.length;
    }
    
@@ -30,11 +30,11 @@ public class Aficion {
     
    
    //Ver si son afines 
-   public boolean  sonAfines (Aficion aficionesArray){
+   public boolean  sonAfines (Aficion Aficiones){
        int aficionesAfines = 0;
        for (int i = 0; i < this.length; i++){
-           for(int j = 0; j < aficionesArray.getLength(); j++) {
-               if (this.Aficiones[i]== aficionesArray.getAficiones()[j])
+           for(int j = 0; j < Aficiones.getLength(); j++) {
+               if (this.Aficiones[i]== Aficiones.getAficiones()[j])
                    aficionesAfines++;
            }
        }

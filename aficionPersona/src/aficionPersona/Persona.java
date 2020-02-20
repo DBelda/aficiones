@@ -7,8 +7,8 @@ public class Persona {
     private boolean afin;
     
     
-    public Persona (String[] aficionesArray){
-        this.misAficiones = new Aficion(aficionesArray);
+    public Persona (String[] Aficiones){
+        this.misAficiones = new Aficion(Aficiones);
         this.afin = false;
     }
 
@@ -26,13 +26,17 @@ public class Persona {
     }
     
     
-    public void verAfinidad (Aficion aficionesArray){
-        if(this.afin && this.misAficiones.sonAfines(aficionesArray)){
+    public void verAfinidad (Aficion Aficiones){
+        if(this.afin && this.misAficiones.sonAfines(Aficiones)){
             this.afin = true;
             
         }
     }
+    
+    
+    public static void main( String [] args ) { 
    
         
     }
+}
     
