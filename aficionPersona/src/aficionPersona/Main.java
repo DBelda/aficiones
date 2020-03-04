@@ -24,16 +24,18 @@ public class Main {
 		final Scanner sc = new Scanner(System.in);
 		
 		final Persona[] personas = {
-			new	Persona("Pepe", new Aficion[]{futbol, cantar, leer, bolos, golf, escribir, pintar}),
+			new	Persona("Pepe", new Aficion[]{futbol, cantar, leer, bolos, golf}),
 			new	Persona("David", new Aficion[]{programar, cantar, natacion, bricolaje, basket}),
-			new	Persona("Delta", new Aficion[]{futbol, cantar, programar, bolos, pintar})
+			new	Persona("Alejandra", new Aficion[]{futbol, cantar, programar, bolos, pintar}),
+			new	Persona("Roberto", new Aficion[]{programar,bolos,basket,pintar,leer}),
+			new	Persona("María", new Aficion[]{leer,pintar,bricolaje,futbol,natacion})
 		};
 		
-		final List<Persona> lista = Arrays.asList(personas);
+		final List<Persona> lista = Arrays.asList(personas); //Crea una lista de personas llamada Persona
 		
 		System.out.println("Selecciona por número la persona con la que quieres ver las afinidades.");
 		System.out.println("Las personas elegibles son :" );
-		lista.forEach(System.out::println);
+		lista.forEach(System.out::println); //Imprime la lista de Personas
 		System.out.print("Código : ");
 		
 		int cod = Integer.parseInt(sc.nextLine());

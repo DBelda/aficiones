@@ -11,18 +11,19 @@ public class Persona {
 	private Aficion[] misAficiones;
 	
 	
+	/* Constructor de Persona */
 	public Persona(String nombre, Aficion[] misAficiones) {
 		this.codPersona = ++cont;
 		this.nombre = nombre;
 		this.misAficiones = misAficiones;
 	}
 	
-	public int getCodPersona() {
+	public int getCodPersona() {  //Getter de CodPersona
 		return codPersona;
 	}
 
 
-	public String getNombre() {
+	public String getNombre() {  //Getter de Nombre
 		return nombre;
 	}
 
@@ -32,12 +33,12 @@ public class Persona {
 	}
 
 
-	public void setCodPersona(int codPersona) {
+	public void setCodPersona(int codPersona) {  //Setter de CodPersona
 		this.codPersona = codPersona;
 	}
 
 
-	public void setNombre(String nombre) {
+	public void setNombre(String nombre) {  //Setter de Nombre
 		this.nombre = nombre;
 	}
 
@@ -61,6 +62,7 @@ public class Persona {
 	}
 	
 	@Override
+	/* Método toString */
 	public String toString() {
 		return String.format("%d: %s", this.codPersona, this.nombre);
 	}
