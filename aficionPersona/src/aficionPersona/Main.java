@@ -51,4 +51,5 @@ public class Main {
 			// %s significa cadena de carácteres
 		});
 	}
+}
 
