@@ -1,51 +1,44 @@
 package aficionPersona;
 
-/**
- *
- *
- */
 public class Aficion {
-    
-   // Variables 
-   private String [] Aficiones = new String [10];
-   private int length;
-   
-   // Constructor
-   public Aficion(String []Aficiones){
-       this.Aficiones = Aficiones;
-       this.length = this.Aficiones.length;
-   }
-   
-   
-    //Obtener Aficiones
-   public String[] getAficiones(){
-       return this.Aficiones;
-       
-   }
-   
-   //Obtener longitud
-   public int getLength(){
-       return this.length;
-   }
-    
-   
-   //Ver si son afines 
-   public boolean  sonAfines (Aficion Aficiones){
-       int aficionesAfines = 0;
-       for (int i = 0; i < this.length; i++){
-           for(int j = 0; j < Aficiones.getLength(); j++) {
-               if (this.Aficiones[i]== Aficiones.getAficiones()[j])
-                   aficionesAfines++;
-           }
-       }
-       
-       if (aficionesAfines >=3)
-           return true;
-       
-       return false;
-           
-           
-           
-           
-       }
-   }
+	
+	/* Variables */
+	private static int cont = 0; //Contador de aficiones
+	private int codAficion; //Código de cada aficion
+	private String nombre; //Nombre de cada aficion
+	
+
+	/* Constructor de Aficion */
+	public Aficion(String nombre) {	
+		this.codAficion = ++cont; 
+		this.nombre = nombre;
+	}
+
+	
+	public int getCodAficion() { //Getter de CodAficion
+		return codAficion;
+	}
+	
+	public String getNombre() { //Getter de Nombre
+		return nombre;
+	}
+	
+	public void setCodAficion(int codAficion) { //Setter de CodAficion
+		this.codAficion = codAficion;
+	}
+	
+	public void setNombre(String nombre) { //Setter de Nombre
+		this.nombre = nombre;
+	}
+	
+
+	/* Método boolean equals
+	 *Si las 2 aficiones son iguales hace 
+	 *que los 2 códigos se Aficion lo sean 
+	 */
+	public boolean equals(Object obj) {		
+		Aficion other = (Aficion) obj;		
+		return this.codAficion == other.codAficion; 
+	}
+	
+}
