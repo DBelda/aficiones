@@ -2,7 +2,7 @@ package aficionPersona;
 
 /**
  * @author Alejandra & David 
- * @version 3.50
+ * @version 3.60
  */
 
 
@@ -42,10 +42,6 @@ public class Aficion {
 	
 
 	
-	
-	/** 
-	 * @param Comparación de objetos
-	 */
 	
 	/* Método boolean equals
 	 * Si las 2 aficiones son iguales hace que los 2 códigos se Aficion lo sean */

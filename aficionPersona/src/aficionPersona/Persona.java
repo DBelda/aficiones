@@ -2,7 +2,7 @@ package aficionPersona;
 
 /**
  * @author Alejandra & David 
- * @version 3.50
+ * @version 3.60
  */
 
 import java.util.ArrayList;
