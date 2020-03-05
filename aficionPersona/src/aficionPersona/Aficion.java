@@ -21,11 +21,12 @@ public class Aficion {
 		this.nombre = nombre;
 	}
 
-	
+	/**@return codAficion*/
 	public int getCodAficion() { //Getter de CodAficion
 		return codAficion;
 	}
 	
+	/**@return Nombre*/
 	public String getNombre() { //Getter de Nombre
 		return nombre;
 	}
@@ -40,10 +41,14 @@ public class Aficion {
 	}
 	
 
-	/* Método boolean equals
-	 *Si las 2 aficiones son iguales hace 
-	 *que los 2 códigos se Aficion lo sean 
+	
+	
+	/** 
+	 * @param Comparación de objetos
 	 */
+	
+	/* Método boolean equals
+	 * Si las 2 aficiones son iguales hace que los 2 códigos se Aficion lo sean */
 	public boolean equals(Object obj) {		
 		Aficion other = (Aficion) obj;		
 		return this.codAficion == other.codAficion; 

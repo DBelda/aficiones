@@ -10,10 +10,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Persona {
-	private static int cont = 0;
-	private int codPersona;
-	private String nombre;
-	private Aficion[] misAficiones;
+	private static int cont = 0; // Contador de Personas
+	private int codPersona; // Código de Persona
+	private String nombre; // Nombre de la Persona
+	private Aficion[] misAficiones; // Aficiones de la Persona
 	
 	
 	/* Constructor de Persona */
@@ -23,17 +23,18 @@ public class Persona {
 		this.misAficiones = misAficiones;
 	}
 	
+	/**@return CodPersona*/
 	public int getCodPersona() {  //Getter de CodPersona
 		return codPersona;
 	}
 
-
+	/**@return Nombre*/
 	public String getNombre() {  //Getter de Nombre
 		return nombre;
 	}
 
 
-	public Aficion[] misAficiones() {
+	public Aficion[] misAficiones() { 
 		return misAficiones;
 	}
 
@@ -48,7 +49,7 @@ public class Persona {
 	}
 
 
-	public void setAficiones(Aficion[] misAficiones) {
+	public void setAficiones(Aficion[] misAficiones) { //Setter de Aficiones
 		this.misAficiones = misAficiones;
 	}
 	
@@ -61,7 +62,7 @@ public class Persona {
 	}
 	
 	@Override
-	public boolean equals(Object obj) { 
+	public boolean equals(Object obj) {  // Compara si las personas son iguales y retorna el código
 		Persona other = (Persona) obj;
 		return this.codPersona == other.codPersona;
 	}
