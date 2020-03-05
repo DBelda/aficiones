@@ -1,5 +1,12 @@
 package aficionPersona;
 
+/**
+ * @author Alejandra & David 
+ * @version 3.50
+ */
+
+
+
 public class Aficion {
 	
 	/* Variables */
@@ -26,6 +33,7 @@ public class Aficion {
 	public void setCodAficion(int codAficion) { //Setter de CodAficion
 		this.codAficion = codAficion;
 	}
+	
 	
 	public void setNombre(String nombre) { //Setter de Nombre
 		this.nombre = nombre;

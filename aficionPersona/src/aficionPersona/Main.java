@@ -1,5 +1,11 @@
 package aficionPersona;
 
+/**
+ * @author Alejandra & David 
+ * @version 3.50
+ */
+
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -29,16 +35,23 @@ public class Main {
 			new	Persona("Alejandra", new Aficion[]{futbol, cantar, programar, bolos, pintar}),
 			new	Persona("Roberto", new Aficion[]{programar,bolos,basket,pintar,leer}),
 			new	Persona("María", new Aficion[]{leer,pintar,bricolaje,futbol,natacion})
+			
+			
 		};
+		
+		
+		
+		
 		
 		final List<Persona> lista = Arrays.asList(personas); //Crea una lista de personas llamada Persona
 		
 		System.out.println("Selecciona por número la persona con la que quieres ver las afinidades.");
 		System.out.println("Las personas elegibles son :" );
 		lista.forEach(System.out::println); //Imprime la lista de Personas
-		System.out.print("Código : ");
+		System.out.print("Código : "); //Imprime código
 		
-		int cod = Integer.parseInt(sc.nextLine());
+		int cod = Integer.parseInt(sc.nextLine()); 
+		//Buscar a una persona por el código introducido y mostrar mensaje si no existe
 		Persona selectedP = lista.stream().filter(p -> p.getCodPersona() == cod).findFirst().orElse(null);
 		if (selectedP == null) {
 			System.out.println("No existe la persona");
@@ -50,7 +63,7 @@ public class Main {
 				return;
 			boolean sonAfines = Persona.sonAfines(p, selectedP);
 			System.out.printf("%s y %s %s afines\n", p.getNombre(), selectedP.getNombre(), sonAfines ? "son" : "no son"); 
-			// %s significa cadena de carácteres
+			// imprime por pantalla y si son afines imprime "son" y si no son afines "no son"
 		});
 	}
 }

@@ -1,5 +1,10 @@
 package aficionPersona;
 
+/**
+ * @author Alejandra & David 
+ * @version 3.50
+ */
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
